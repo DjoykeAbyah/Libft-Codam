@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:13:45 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/14 10:45:08 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/10/14 17:24:06 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,10 +127,16 @@ int	main(void)
 	printf("%i\n", ft_strncmp(cake, pie, 3));
 	printf("%i\n", strncmp(cake, pie, 3));
 
-	printf("\n%s\n", ("Test atoi");
-	char s[] = "90003";
+	printf("\n%s\n", ("Test atoi"));
+	char s[] = "";
 	printf("%i\n", ft_atoi(s));
 	printf("%i\n", atoi(s));
+
+	printf("\n%s\n", ("Test strnstr"));
+	char haystack[] = "catfishswim";
+	char needle[] = "fish";
+	printf("%s\n", ft_strnstr(haystack, needle, 6));
+	printf("%s\n", strnstr(haystack, needle, 6));
 }
 
 /*put block brackets when testing you variables

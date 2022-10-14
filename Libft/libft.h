@@ -6,12 +6,14 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:14:52 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/13 19:16:52 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/10/14 13:28:14 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+#include <stdlib.h>
 /**
  * include the libraries you want to include like unistd.h etc
  * make quotes above funtions
@@ -43,5 +45,7 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *s, int c);
 
 int ft_strncmp(const char *s1, const char *s2, size_t n);
+
+int ft_atoi(const char *str);
 
 #endif

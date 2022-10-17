@@ -6,34 +6,35 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 13:40:10 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/14 17:20:28 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/10/17 15:01:15 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-char * ft_strnstr(const char *haystack, const char *needle, size_t len)
+#include <stdlib.h>
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int i;
-	int j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (needle[i] == '\0')
 	{
-		return (haystack);
+		return ((char *)haystack);
 	}
-	while (haystack[i] != '\0' && haystack[i] <= len)
+	while ((haystack[i] != '\0') && (i < len))
 	{
 		j = 0;
-		if (haystack[i+j] == needle[j])
+		while (haystack[i + j] == needle[j] && (j + i < len))
 		{
 			if (needle[j + 1] == '\0')
 			{
-				return (&haystack[i]);
+				return ((char *)&haystack[i]);
 			}
+			j++;
 		}
-		j++;
 		i++;
 	}
-	return (NULL)
-	
+	return (NULL);
 }
-//logica ervan uitschrijven, als neelde \0 is haystack returnen??
+/*in a while loop be sure to write all the conditions even if you already wrote them in another loop*/

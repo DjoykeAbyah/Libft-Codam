@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:13:45 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/14 17:24:06 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/10/17 19:35:20 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+
+/*put block brackets when testing you variables
+you don't have to include your libraries in the .c funtcions but put them in your main for testing
+VERGEET NIET DEZE FILE TE VERWIJDEREN VOORDAT JE PUSHT*/
 
 //test bzero to see if it actually does anything
 void	helpmesee(char *help, int n)
@@ -39,9 +43,6 @@ void	helpmesee(char *help, int n)
 	}
 }
 
-/**
- * VERGEET NIET DEZE FILE TE VERWIJDEREN VOORDAT JE PUSHT
- */
 int	main(void)
 {
 	printf("%s\n", ("Test is al num"));
@@ -134,10 +135,17 @@ int	main(void)
 
 	printf("\n%s\n", ("Test strnstr"));
 	char haystack[] = "catfishswim";
-	char needle[] = "fish";
-	printf("%s\n", ft_strnstr(haystack, needle, 6));
-	printf("%s\n", strnstr(haystack, needle, 6));
-}
+	char needle[] = "fishs";
+	printf("%s\n", ft_strnstr(haystack, needle, 8));
+	printf("%s\n", strnstr(haystack, needle, 8));
 
-/*put block brackets when testing you variables
-you don't have to include your libraries in the .c funtcions but put them in your main for testing*/
+	printf("\n%s\n", ("Test strlcat"));
+	char dst[50] = "012345";
+	char src2[] = "abcde";
+	printf("%zu\n", ft_strlcat(dst, src2, 5));
+	printf("%s\n", dst);
+	char dst1[50] = "012345";
+	char src3[] = "abcde";
+	printf("%zu\n", strlcat(dst1, src3, 5));
+	printf("%s\n", dst1);
+}

@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_bzero.c                                         :+:    :+:            */
+/*   ft_putendl_fd.c                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/11 11:03:30 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/24 11:10:52 by dreijans      ########   odam.nl         */
+/*   Created: 2022/10/25 19:40:10 by dreijans      #+#    #+#                 */
+/*   Updated: 2022/10/26 11:08:57 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	ft_memset(s, '\0', n);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
 
 /*
-	unsigned char	*c;
-	size_t			i;
+int	i;
 
 	i = 0;
-	c = s;
-	while (i < n)
+	while (s[i] != '\0')
 	{
-		c[i] = '\0';
+		write (1, &s[i], 1);
 		i++;
 	}
+*/
+
+/*
+Prototype void ft_putendl_fd(char *s, int fd);
+Turn in files -
+Parameters s: The string to output.
+fd: The file descriptor on which to write.
+Return value None
+External functs. write
+Description Outputs the string ’s’ to the given file descriptor
+followed by a newline.
 */

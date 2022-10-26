@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 10:34:39 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/13 11:39:44 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/10/19 16:10:58 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,3 @@ char	*ft_strchr(const char *s, int c)
 	}	
 	return (NULL);
 }
-
-
-/*char	*ft_strchr(const char *str, int c)
-{
-	while (str != '\0')
-	{
-		if (*str == (char) c)
-		{
-			return ((char *) str);
-		}
-		str++;
-	}
-	return (NULL);
-} weird ass code almost works but in a weird way*/

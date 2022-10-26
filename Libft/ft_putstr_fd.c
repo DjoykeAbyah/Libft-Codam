@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memset.c                                        :+:    :+:            */
+/*   ft_putstr_fd.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/10 13:37:14 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/24 11:13:25 by dreijans      ########   odam.nl         */
+/*   Created: 2022/10/25 19:22:38 by dreijans      #+#    #+#                 */
+/*   Updated: 2022/10/26 11:07:51 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* writes len bytes of value c (converted to an unsigned char)
-to the string b. */
+#include "libft.h"
+#include <unistd.h>
 
-#include <stdlib.h>
-
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned char	*charb;
-	size_t			i;
-
-	i = 0;
-	charb = b;
-	while (i < len)
-	{
-		*charb = (unsigned char)c;
-		charb++;
-		i++;
-	}
-	return (b);
+	write (fd, s, ft_strlen(s));
 }
+
+/*
+Parameters:
+s: The string to output.
+fd: The file descriptor on which to write.
+
+Return value:
+None
+
+External functs: 
+write
+
+Description:
+Outputs the string ’s’ to the given file descriptor.
+*/

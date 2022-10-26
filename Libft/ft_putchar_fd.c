@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memset.c                                        :+:    :+:            */
+/*   ft_putchar_fd.c                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/10 13:37:14 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/24 11:13:25 by dreijans      ########   odam.nl         */
+/*   Created: 2022/10/25 18:40:00 by dreijans      #+#    #+#                 */
+/*   Updated: 2022/10/25 19:19:51 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* writes len bytes of value c (converted to an unsigned char)
-to the string b. */
+#include <unistd.h>
 
-#include <stdlib.h>
-
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned char	*charb;
-	size_t			i;
-
-	i = 0;
-	charb = b;
-	while (i < len)
-	{
-		*charb = (unsigned char)c;
-		charb++;
-		i++;
-	}
-	return (b);
+	write (fd, &c, 1);
 }
+
+/*
+Parameters:
+c: The character to output.
+fd: The file descriptor on which to write.
+Return value: 
+None
+External functs. write
+Description Outputs the character ’c’ to the given file
+descriptor.
+
+no use of printf because this function just writes
+*/

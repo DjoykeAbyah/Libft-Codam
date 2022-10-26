@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 16:32:12 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/17 15:20:57 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/10/20 15:07:04 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,20 @@
 	return (i);
 }*/
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	char* d;
-	int len;
+	char	*d;
+	int		len;
 
 	d = (char *)s;
 	len = ft_strlen(d);
 	while (len >= 0)
 	{
-		if (*d == c)
+		if (d[len] == (char)c)
 		{
-			return (d);
+			return (&d[len]);
 		}
 		len--;
-		d++;
 	}
 	return (NULL);
 }

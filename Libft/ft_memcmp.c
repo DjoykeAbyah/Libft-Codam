@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memset.c                                        :+:    :+:            */
+/*   ft_memcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/10 13:37:14 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/24 11:13:25 by dreijans      ########   odam.nl         */
+/*   Created: 2022/10/19 17:54:30 by dreijans      #+#    #+#                 */
+/*   Updated: 2022/10/21 14:22:49 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* writes len bytes of value c (converted to an unsigned char)
-to the string b. */
-
 #include <stdlib.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*charb;
-	size_t			i;
+	size_t	i;
+	char	*str1;
+	char	*str2;
 
+	str1 = (char *)s1;
+	str2 = (char *)s2;
 	i = 0;
-	charb = b;
-	while (i < len)
+	while (n > i)
 	{
-		*charb = (unsigned char)c;
-		charb++;
+		if (str1[i] != str2[i])
+		{
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		}
 		i++;
 	}
-	return (b);
+	return (0);
 }
+/* met mem functies hoef je niet te letten op \0 char 
+je niet in een string kijkt memory bekijkt wat ook \o char kan bevatten*/

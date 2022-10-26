@@ -6,29 +6,33 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 14:38:00 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/13 11:06:07 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/10/20 14:32:25 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < (size -1))
+	while (src[i] != '\0' && (i + 1) < dstsize)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	if (i < size)
-		dst[i] = '\0';
+	if (i < dstsize)
+	dst[i] = '\0';
 	return (ft_strlen(src));
 }
 
-/*int main(void)
+/*
+size_t kan niet negatief zijn dus (i +1) ipv (destsize -1)
+
+
+int main(void)
 {
 	char src[] = "hello";
 	char dest[20];

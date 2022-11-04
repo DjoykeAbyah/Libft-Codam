@@ -6,7 +6,7 @@
 #    By: dreijans <dreijans@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/04 16:56:00 by dreijans      #+#    #+#                  #
-#    Updated: 2022/10/26 12:51:17 by dreijans      ########   odam.nl          #
+#    Updated: 2022/11/02 17:18:30 by dreijans      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,12 @@ ft_strjoin.c \
 ft_putchar_fd.c \
 ft_putstr_fd.c \
 ft_putendl_fd.c \
-ft_strtrim.c 
+ft_strtrim.c \
+ft_striteri.c \
+ft_strmapi.c \
+ft_itoa.c \
+ft_putnbr_fd.c \
+ft_split.c 
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 

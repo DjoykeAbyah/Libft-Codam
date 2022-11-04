@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 13:40:10 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/17 15:01:15 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/01 16:11:16 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*in a while loop be sure to write all the conditions even if you already wrote them in another loop*/
+/*in a while loop be sure to write all the conditions 
+even if you already wrote them in another loop*/

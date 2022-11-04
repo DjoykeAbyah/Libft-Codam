@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:13:45 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/26 17:22:22 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/03 13:25:45 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,24 @@ you don't have to include your libraries in the .c funtcions but put them in you
 VERGEET NIET DEZE FILE TE VERWIJDEREN VOORDAT JE PUSHT*/
 
 //test bzero to see if it actually does anything
+
+void	aaaaa(unsigned int i, char *c)
+{
+	*c = *c + 4;
+	i++;
+}
+
+void	ont_aaaaa(unsigned int i, char *c)
+{
+	*c = *c - 4;
+	i++;
+}
+
+char	bbbbb(unsigned int i, char c)
+{
+	return (c + i);
+}
+
 void	helpmesee(char *help, int n)
 {
 	int	i;
@@ -226,4 +244,43 @@ int	main(void)
 	char set[] = "";
 	printf("%s\n", ft_strtrim(test20, set));
 	printf("----------------------------");
+	printf("\n%s\n", "test striteri");
+	char test21[] = "dit is een hele leuke test zin weeeeee";
+	printf("%s\n", test21);
+	ft_striteri(test21, aaaaa);
+	printf("%s\n", test21);
+	ft_striteri(test21, ont_aaaaa);
+	printf("%s\n", test21);
+	printf("----------------------------");
+	printf("\n%s\n", "test strmapi");
+	char test22[] = "00000000000000000000000";
+	char *test23;
+	printf("%s\n", test22);
+	test23 = ft_strmapi(test22, bbbbb);
+	printf("%s\n", test23);
+	printf("----------------------------");
+	printf("\n%s\n", "test itoa");
+	int n = 2147483647;
+	printf("%s\n", ft_itoa(n));
+	printf("----------------------------");
+	printf("\n%s\n", "test putnbr");
+	ft_putnbr_fd(55675, 1);
+	printf("----------------------------");
+	printf("\n%s\n", "test split");
+	char test24[] = "...loo...books....look....a....123.....test...";
+	char **array;
+	// char test24[] = "olol                     ";
+    // char **array = ft_split(test24, ' ');
+	int i; 
+	
+	i = 0;
+	array = ft_split(test24, '.');
+	while (array[i])
+	{
+		printf("%s\n", array[i]);
+		i++;
+	}
+	return (0);
 }
+
+/* voor inlveren main verwijderen en git clonen voor final check!!!!!*/

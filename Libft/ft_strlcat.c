@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 14:41:18 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/19 19:32:03 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/01 16:10:41 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ returns the total length of the string strlcat() tried to create.
 
 appends string src to the end of dst.  
 It will append at most dstsize - strlen(dst) - 1 characters.  
-It will then NUL-terminate, unless dstsize is 0 or the original dst string was longer than dstsize (in practice this should not happen as
+It will then NUL-terminate, unless dstsize is 0 or the original 
+dst string was longer than dstsize (in practice this should not happen as
 it means that either dstsize is incorrect or that dst is not a proper string), 
 RETURN VALUES means the initial length of dst plus the length of src.  
-If the return value is >= dstsize, the output string has been truncated.  It is the caller's responsibility to handle this. 
+If the return value is >= dstsize, the output string has been truncated.
+It is the caller's responsibility to handle this. 
 size - dstlen  -1 !!!!!!!!!! */
 
 #include "libft.h"

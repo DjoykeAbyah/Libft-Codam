@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 09:41:41 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/21 16:00:44 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/01 16:07:42 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,13 @@ int	ft_atoi(const char *str)
 	return (number * sign);
 }
 
-	/*does not recognize or +/- decimal points, ignores whitespace
-	skip white space characters
-	detect minus
-	by doing the conversion you sustract 48 from yout char value of a number getting the actual int 
-	CHECK WHITE SPACE check !!!!!!!man isspace!!!!
-	let op dat je niet int met char vergelijkt en denkt dat het werkt! i != '\0' is niet hetzelfde als str[i] != '\0'*/
-	
+/*does not recognize or +/- decimal points,
+ignores whitespace
+skip white space characters
+detect minus
+by doing the conversion you sustract 48 from
+your char value of a number getting the actual int 
+CHECK WHITE SPACE check !!!!!!!man isspace!!!!
+let op dat je niet int met char vergelijkt
+en denkt dat het werkt! i != '\0' is niet hetzelfde als str[i] != '\0'*/
+// 2147483647 + 1 = -2147483648

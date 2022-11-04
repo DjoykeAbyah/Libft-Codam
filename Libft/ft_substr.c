@@ -6,12 +6,13 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/24 14:52:15 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/25 15:17:19 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/02 19:00:29 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

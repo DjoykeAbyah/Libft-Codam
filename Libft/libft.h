@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:14:52 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/26 12:51:03 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/03 13:03:07 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
 /**
  * include the libraries you want to include like unistd.h etc
  * make quotes above funtions
@@ -47,5 +54,10 @@ char	*ft_strtrim(char const *s1, char const *set);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_itoa(int n);
+void	ft_putnbr_fd(int n, int fd);
+char	**ft_split(char const *s, char c);
 
 #endif

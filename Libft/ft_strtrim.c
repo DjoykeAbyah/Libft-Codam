@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 14:11:04 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/26 17:36:05 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/02 12:33:28 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		start++;
 	}
-	if (len == 0|| start == len)
+	if (len == 0 || start == len)
 		len = 1;
 	else
 	{
 		while (ft_strchr(set, s1[len - 1]) && len != 0)
-		{
 			len--;
-		}
 	}
 	newstr = ft_substr(s1, start, len - start);
 	return (newstr);

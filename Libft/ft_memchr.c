@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 13:14:17 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/19 17:24:20 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/01 16:09:51 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*d;
-	size_t	i;
+	size_t			i;
 
 	d = (unsigned char *)s;
 	i = 0;

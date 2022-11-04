@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 14:02:44 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/21 11:20:27 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/01 16:10:08 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-/*last while loop extra ptrd != '\0' but then it doesnt seg fault while it should*/
+/*last while loop extra ptrd != '\0' 
+but then it doesnt seg fault while it should*/

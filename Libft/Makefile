@@ -6,7 +6,7 @@
 #    By: dreijans <dreijans@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/04 16:56:00 by dreijans      #+#    #+#                  #
-#    Updated: 2022/11/02 17:18:30 by dreijans      ########   odam.nl          #
+#    Updated: 2022/11/04 17:32:53 by dreijans      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,29 +47,42 @@ ft_strmapi.c \
 ft_itoa.c \
 ft_putnbr_fd.c \
 ft_split.c 
-OBJ = $(SRC:.c=.o)
+BSRC = ft_lstnew_bonus.c
+REG_OBJ_FILES = $(SRC:.c=.o)
+BONUS_OBJ_FILES = $(BSRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 
-.PHONY: all clean fclean re test
+ifdef WITH_BONUS
+OBJ_FILES = $(REG_OBJ_FILES) $(BONUS_OBJ_FILES)
+else
+OBJ_FILES = $(REG_OBJ_FILES)
+endif
+
+.PHONY: all clean fclean re test bonus
 
 all: $(NAME)
 #later $(CC) $(CFLAGS) $(SRC) verwijderen want we hbeben geen executable nodig voor de opdracht 
 #stuur geen main.c en test recept verwijderen
-$(NAME): $(OBJ)
+$(NAME): $(OBJ_FILES)
 #		$(CC) $(CFLAGS) $(SRC) main.c
-		ar -src $(NAME) $(OBJ)
+		ar -src $(NAME) $(OBJ_FILES)
 
 %.o: %.c
 		@$(CC) -c $(CFLAGS) -o $@ $^
 
 clean:
-		rm -f *.o
+		rm -f $(REG_OBJ_FILES)
+		rm -f $(BONUS_OBJ_FILES)
 
 fclean: clean # VERGEET NIET A.OUT TE VERWIJDEREN VOORDAT JE PUSHT
 		rm -f $(NAME) ./a.out 
 
 re: fclean all
 
+bonus:
+		$(MAKE) WITH_BONUS=1 all
+		ar -src $(NAME) $(BONUS_OBJ_FILES)
+
 test: re # als je (SRC) zou doen kan het zijn dat niet alles up to dat is
-		gcc main.c $(OBJ) $(CFLAGS)
+		gcc main.c $(OBJ_FILES) $(CFLAGS)
 		./a.out

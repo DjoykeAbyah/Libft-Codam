@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:14:52 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/03 13:03:07 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/04 17:27:06 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_itoa(int n);
 void	ft_putnbr_fd(int n, int fd);
 char	**ft_split(char const *s, char c);
+
+/*bonus*/
+t_list	*ft_lstnew(void *content);
 
 #endif

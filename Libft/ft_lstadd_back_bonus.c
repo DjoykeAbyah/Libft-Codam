@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_bzero.c                                         :+:    :+:            */
+/*   ft_lstadd_back_bonus.c                             :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/11 11:03:30 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/07 19:28:14 by dreijans      ########   odam.nl         */
+/*   Created: 2022/11/07 17:50:32 by dreijans      #+#    #+#                 */
+/*   Updated: 2022/11/07 19:19:09 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	ft_memset(s, '\0', n);
+	while (*lst != NULL)
+	{
+		(*lst) = (*lst)->next;	
+	}
+	if ((*lst)->next == NULL)
+		new = (*lst)->content;
 }
 
 /*
-	unsigned char	*c;
-	size_t			i;
+Parameters:
+lst: The address of a pointer
+to the first link of a list.
+new: The address of a pointer
+to the node to be added to the list.
 
-	i = 0;
-	c = s;
-	while (i < n)
-	{
-		c[i] = '\0';
-		i++;
-	}
+Description:
+Adds the node ’new’ at the end of the list.
 */

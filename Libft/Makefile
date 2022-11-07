@@ -6,7 +6,7 @@
 #    By: dreijans <dreijans@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/04 16:56:00 by dreijans      #+#    #+#                  #
-#    Updated: 2022/11/04 17:32:53 by dreijans      ########   odam.nl          #
+#    Updated: 2022/11/07 19:31:58 by dreijans      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,10 @@ ft_strmapi.c \
 ft_itoa.c \
 ft_putnbr_fd.c \
 ft_split.c 
-BSRC = ft_lstnew_bonus.c
+BSRC = ft_lstnew_bonus.c \
+ft_lstadd_front_bonus.c \
+ft_lstlast_bonus.c \
+ft_lstsize_bonus.c 
 REG_OBJ_FILES = $(SRC:.c=.o)
 BONUS_OBJ_FILES = $(BSRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
@@ -83,6 +86,6 @@ bonus:
 		$(MAKE) WITH_BONUS=1 all
 		ar -src $(NAME) $(BONUS_OBJ_FILES)
 
-test: re # als je (SRC) zou doen kan het zijn dat niet alles up to dat is
+test: re # or *.c als je (SRC) zou doen kan het zijn dat niet alles up to dat is
 		gcc main.c $(OBJ_FILES) $(CFLAGS)
 		./a.out

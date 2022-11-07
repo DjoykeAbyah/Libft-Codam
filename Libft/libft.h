@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:14:52 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/04 17:27:06 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/07 19:27:09 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+// #include "libft.h"
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 typedef struct s_list
 {
@@ -62,5 +68,8 @@ char	**ft_split(char const *s, char c);
 
 /*bonus*/
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+t_list	*ft_lstlast(t_list *lst);
+int		ft_lstsize(t_list *lst);
 
 #endif

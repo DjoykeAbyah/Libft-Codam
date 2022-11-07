@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_bzero.c                                         :+:    :+:            */
+/*   ft_lstlast_bonus.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/11 11:03:30 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/07 19:28:14 by dreijans      ########   odam.nl         */
+/*   Created: 2022/11/07 13:48:54 by dreijans      #+#    #+#                 */
+/*   Updated: 2022/11/07 18:51:38 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstlast(t_list *lst)
 {
-	ft_memset(s, '\0', n);
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }
 
 /*
-	unsigned char	*c;
-	size_t			i;
+Parameters: 
+lst: The beginning of the list.
 
-	i = 0;
-	c = s;
-	while (i < n)
-	{
-		c[i] = '\0';
-		i++;
-	}
+Return value:
+
+Last node of the list
+
+Description Returns the last node of the list.
+dont use pointers because you donot want to change
+at the address just want to move to the end.
 */

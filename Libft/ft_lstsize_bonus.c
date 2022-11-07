@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_bzero.c                                         :+:    :+:            */
+/*   ft_lstsize_bonus.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/11 11:03:30 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/07 19:28:14 by dreijans      ########   odam.nl         */
+/*   Created: 2022/11/07 17:07:51 by dreijans      #+#    #+#                 */
+/*   Updated: 2022/11/07 18:51:50 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	ft_memset(s, '\0', n);
+	int	i;
+
+	i = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
+
 }
 
 /*
-	unsigned char	*c;
-	size_t			i;
+Parameters:
+lst: The beginning of the list.
 
-	i = 0;
-	c = s;
-	while (i < n)
-	{
-		c[i] = '\0';
-		i++;
-	}
+Return value:
+The length of the list
+
+Description Counts the number of nodes in a list.
 */

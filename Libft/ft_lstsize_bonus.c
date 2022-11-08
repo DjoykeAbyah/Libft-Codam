@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/07 17:07:51 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/07 18:51:50 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/08 18:51:09 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	ft_lstsize(t_list *lst)
 		i++;
 	}
 	return (i);
-
 }
 
 /*

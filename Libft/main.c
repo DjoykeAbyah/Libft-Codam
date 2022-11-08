@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:13:45 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/07 19:42:56 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/08 19:31:49 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,19 @@ void	helpmesee(char *help, int n)
 	}
 }
 
+void	printlist(t_list *head)
+{
+	t_list	*temp;
+	temp = head;
+
+	while (temp != NULL)
+	{
+		printf("%i ", *(int *)temp->content);
+		temp = temp->next;
+	}
+	printf("NULL\n");
+}
+	
 int	main(void)
 {
 	printf("%s\n", ("Test is al num"));
@@ -267,7 +280,7 @@ int	main(void)
 	printf("\n%s\n", "test putnbr");
 	ft_putnbr_fd(55675, 1);
 	printf("----------------------------");
-	printf("\n%s\n", "test split");
+	printf("\n%s\n", "test split uncomment return to test");
 	char test24[] = "...loo...books....look....a....123.....test...";
 	char **array;
 	int i; 
@@ -279,23 +292,41 @@ int	main(void)
 		printf("%s\n", array[i]);
 		i++;
 	}
-	return (0);
-// 	printf("----------------------------");
-// 	printf("\n%s\n", "test bonus");
+	// return (0);
+	
 
-// 	t_list *lstr;
-// 	int	*lsta;
-// 	lsta = malloc(sizeof (int));
-// 	*lsta = 1;
-// 	lstr = ft_lstnew((void *) lsta);
 
-// 	t_list *nstr;
-// 	int *lstb;
-// 	lstb = malloc(sizeof (int));
-// 	*lstb = 2;
-// 	nstr = ft_lstnew((void *) lstb);
 
-// 	printf("%i\n", ft_lstsize(lstr));
+
+
+
+
+	
+	printf("----------------------------");
+	printf("\n%s\n", "test bonus");
+
+	t_list *islast;
+
+	t_list *lstr;
+	int	lsta;
+	lsta = 1;
+	lstr = ft_lstnew((void *) &lsta);
+	printlist(lstr);
+	
+	t_list *nstr;
+	int lstb;
+	// lstb = malloc(sizeof (int));
+	lstb = 2;
+	nstr = ft_lstnew((void *) &lstb);
+	printlist(nstr);
+
+	// ft_lstadd_front(&lstr, nstr);
+	ft_lstadd_back(&lstr, nstr);
+	islast = ft_lstlast(lstr);
+	// ft_lstlast(nstr);
+	// printf("%i\n", ft_lstsize(lstr));
+	// printlist(lstr);
+	printf("%i ", *(int *)islast->content);
 }
 
 /* voor inlveren main verwijderen en git clonen voor final check!!!!!*/

@@ -6,7 +6,7 @@
 #    By: dreijans <dreijans@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/04 16:56:00 by dreijans      #+#    #+#                  #
-#    Updated: 2022/11/07 19:31:58 by dreijans      ########   odam.nl          #
+#    Updated: 2022/11/08 17:39:58 by dreijans      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,9 @@ ft_split.c
 BSRC = ft_lstnew_bonus.c \
 ft_lstadd_front_bonus.c \
 ft_lstlast_bonus.c \
-ft_lstsize_bonus.c 
+ft_lstsize_bonus.c \
+ft_lstadd_back_bonus.c \
+ft_lstdelone_bonus.c 
 REG_OBJ_FILES = $(SRC:.c=.o)
 BONUS_OBJ_FILES = $(BSRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
@@ -84,8 +86,8 @@ re: fclean all
 
 bonus:
 		$(MAKE) WITH_BONUS=1 all
-		ar -src $(NAME) $(BONUS_OBJ_FILES)
+#		ar -src $(NAME) $(BONUS_OBJ_FILES)
 
 test: re # or *.c als je (SRC) zou doen kan het zijn dat niet alles up to dat is
-		gcc main.c $(OBJ_FILES) $(CFLAGS)
+		gcc *.c
 		./a.out

@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:14:52 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/07 19:27:09 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/08 18:58:20 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+//pointer naar content. fixed bytes voor struct
 
 /**
  * include the libraries you want to include like unistd.h etc
@@ -71,5 +73,7 @@ t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstlast(t_list *lst);
 int		ft_lstsize(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif

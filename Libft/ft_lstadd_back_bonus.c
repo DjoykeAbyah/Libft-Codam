@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/07 17:50:32 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/07 19:19:09 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/08 15:13:47 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,17 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	while (*lst != NULL)
+	t_list	*back;
+
+	if (*lst)
 	{
-		(*lst) = (*lst)->next;	
+		back = ft_lstlast(*lst);
+		back->next = new;
 	}
-	if ((*lst)->next == NULL)
-		new = (*lst)->content;
+	else
+	{
+		*lst = new;
+	}
 }
 
 /*

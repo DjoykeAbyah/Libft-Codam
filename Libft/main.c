@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:13:45 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/08 19:31:49 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/09 19:25:17 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,12 @@ void	helpmesee(char *help, int n)
 			i++;
 		}
 	}
+}
+
+void	delete(void *content)
+{
+	content = 0;
+	printf("%i",content);
 }
 
 void	printlist(t_list *head)
@@ -293,14 +299,12 @@ int	main(void)
 		i++;
 	}
 	// return (0);
+
+
+
+
+
 	
-
-
-
-
-
-
-
 	
 	printf("----------------------------");
 	printf("\n%s\n", "test bonus");
@@ -314,10 +318,10 @@ int	main(void)
 	printlist(lstr);
 	
 	t_list *nstr;
-	int lstb;
-	// lstb = malloc(sizeof (int));
-	lstb = 2;
-	nstr = ft_lstnew((void *) &lstb);
+	int *lstb;
+	lstb = malloc(sizeof (int));
+	*lstb = 2;
+	nstr = ft_lstnew((void *) lstb);
 	printlist(nstr);
 
 	// ft_lstadd_front(&lstr, nstr);
@@ -326,7 +330,9 @@ int	main(void)
 	// ft_lstlast(nstr);
 	// printf("%i\n", ft_lstsize(lstr));
 	// printlist(lstr);
-	printf("%i ", *(int *)islast->content);
+	//printf("%i ", *(int *)islast->content);
+	// ft_lstdelone(nstr, delete);
+	ft_lstclear(nstr, delete);
 }
 
-/* voor inlveren main verwijderen en git clonen voor final check!!!!!*/
+/* voor inleveren main verwijderen en git clonen voor final check!!!!!*/

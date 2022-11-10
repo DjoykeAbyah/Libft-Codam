@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:13:45 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/09 19:25:17 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/10 14:34:26 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,12 @@ you don't have to include your libraries in the
 VERGEET NIET DEZE FILE TE VERWIJDEREN VOORDAT JE PUSHT*/
 
 //test bzero to see if it actually does anything
+
+void	cccc(unsigned int i, unsigned int j)
+{
+	j = j + 4;
+	i++;
+}
 
 void	aaaaa(unsigned int i, char *c)
 {
@@ -288,6 +294,7 @@ int	main(void)
 	printf("----------------------------");
 	printf("\n%s\n", "test split uncomment return to test");
 	char test24[] = "...loo...books....look....a....123.....test...";
+	// char test24[] = "";
 	char **array;
 	int i; 
 	
@@ -298,7 +305,7 @@ int	main(void)
 		printf("%s\n", array[i]);
 		i++;
 	}
-	// return (0);
+	return (0);
 
 
 
@@ -330,9 +337,65 @@ int	main(void)
 	// ft_lstlast(nstr);
 	// printf("%i\n", ft_lstsize(lstr));
 	// printlist(lstr);
-	//printf("%i ", *(int *)islast->content);
+	// printf("%i ", *(int *)islast->content);
 	// ft_lstdelone(nstr, delete);
-	ft_lstclear(nstr, delete);
+	// ft_lstclear(nstr, delete);
+	ft_lstmap(nstr, cccc, delete);
 }
 
 /* voor inleveren main verwijderen en git clonen voor final check!!!!!*/
+
+
+
+
+
+
+
+
+// void	del(void *a)
+// {
+// 	// printf("\ndel: %s", (char *)a);
+// }
+// void	f(void *a)
+// {
+// 	// printf("\nf: %s", (char *)a);
+// }
+// int	main(void)
+// {
+// 	t_list	*root_node;
+// 	t_list	*current_node;
+// 	int		 i = 0;
+// 	char	*items[] = {"lorem", "ipsum", "dolor", "sit", "item4",
+// 						"item5", "item6", "item7","item8", "item9"};
+
+// 	root_node = malloc(sizeof(t_list));
+
+// 	root_node -> content = items[0];
+// 	root_node -> next = NULL;
+
+// 	current_node = root_node;
+// 	while (i < 9)
+// 	{
+// 		current_node -> next = ft_lstnew(items[i + 1]);
+// 		current_node = current_node -> next;
+// 		i++;
+// 	}
+// 	current_node -> next = NULL;
+
+// 	printf("\nBefore: ");
+// 	current_node = root_node;
+// 	while (current_node != NULL)
+// 	{
+// 		printf("%s, ", (char *) current_node -> content);
+// 		current_node = current_node -> next;
+// 	}
+
+// 	printf("\nAfter: ");
+// 	current_node = NULL;
+// 	current_node = ft_lstmap(root_node, (void *)(f), del);
+// 	while (current_node != NULL)
+// 	{
+// 		printf("%s, ", (char *)current_node -> content);
+// 		current_node = current_node -> next;
+// 	}
+// }

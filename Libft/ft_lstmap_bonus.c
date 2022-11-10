@@ -6,15 +6,39 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/09 19:15:05 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/09 19:23:15 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/10 14:17:12 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void*))
 {
-	
+	t_list	*new_lst;
+	t_list	*mod_node;
+	void	*new_content;
+
+	new_lst = NULL;
+	while (lst)
+	{
+		new_content = (*f)(lst->content);
+		if (new_content == NULL)
+		{
+			ft_lstclear(&new_lst, del);
+			return (NULL);
+		}
+		mod_node = ft_lstnew(new_content);
+		if (mod_node == NULL)
+		{
+			del(new_content);
+			ft_lstclear(&new_lst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_lst, mod_node);
+		lst = lst->next;
+	}
+	return (new_lst);
 }
 
 /*
@@ -33,9 +57,11 @@ External functs:
 malloc, free
 
 Description:
-Iterates the list ’lst’ and applies the function
-’f’ on the content of each node. Creates a new
-list resulting of the successive applications of
-the function ’f’. The ’del’ function is used to
+1) Iterates the list ’lst’ and applies the function
+’f’ on the content of each node. 
+2) Creates a new list resulting 
+of the successive applications of
+the function ’f’. 
+3)The ’del’ function is used to
 delete the content of a node if needed.
 */

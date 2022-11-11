@@ -6,11 +6,10 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 11:03:30 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/07 19:28:14 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 15:58:51 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

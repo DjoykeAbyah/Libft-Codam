@@ -6,11 +6,11 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 17:54:30 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/21 14:22:49 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:47:56 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -31,5 +31,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/* met mem functies hoef je niet te letten op \0 char 
-je niet in een string kijkt memory bekijkt wat ook \o char kan bevatten*/
+/*
+The memcmp() function compares byte string s1 against byte string s2. 
+Both strings are assumed to be n bytes long.
+The memcmp() function returns zero if the two strings are identical 
+otherwise returns the difference between the first two differing bytes 
+(treated as unsigned char values, so that `\200' is greater than `\0',)
+Zero-length strings are always identical.  
+This behavior is not required by C and 
+portable code should only depend on the sign of the returned value.
+*/

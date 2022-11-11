@@ -6,17 +6,15 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 14:11:04 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/02 12:33:28 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:13:10 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*newstr;
+	char	*new_str;
 	size_t	start;
 	size_t	len;
 
@@ -33,8 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		while (ft_strchr(set, s1[len - 1]) && len != 0)
 			len--;
 	}
-	newstr = ft_substr(s1, start, len - start);
-	return (newstr);
+	new_str = ft_substr(s1, start, len - start);
+	return (new_str);
 }
 
 /* start + len is einde string*/

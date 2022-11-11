@@ -6,25 +6,24 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 14:19:08 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/25 15:57:11 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:03:49 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char		*newstr;
+	char		*new_str;
 	size_t		len;
 
 	len = (ft_strlen(s1) + ft_strlen(s2)) + 1;
-	newstr = (char *)malloc(sizeof (char) * len);
-	if (newstr != '\0')
+	new_str = (char *)malloc(sizeof (char) * len);
+	if (new_str != '\0')
 	{
-		ft_strlcpy(newstr, s1, (ft_strlen(s1) + 1));
-		ft_strlcat(newstr, s2, len);
-		return (newstr);
+		ft_strlcpy(new_str, s1, (ft_strlen(s1) + 1));
+		ft_strlcat(new_str, s2, len);
+		return (new_str);
 	}
 	return (NULL);
 }

@@ -6,14 +6,11 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 13:37:14 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/24 11:13:25 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:51:16 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* writes len bytes of value c (converted to an unsigned char)
-to the string b. */
-
-#include <stdlib.h>
+#include <stddef.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -30,3 +27,8 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
+
+/* 
+writes len bytes of value c (converted to an unsigned char)
+to the string b. 
+*/

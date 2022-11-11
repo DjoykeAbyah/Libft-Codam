@@ -6,11 +6,10 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/27 17:43:26 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/04 11:53:30 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 15:58:48 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 static int	howmuch(int a)

@@ -6,12 +6,9 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 18:40:23 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/01 16:08:49 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:38:40 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*#include <stdio.h>
-#include <ctype.h>*/
 
 int	ft_isascii(int c)
 {
@@ -21,3 +18,8 @@ int	ft_isascii(int c)
 	}
 	return (0);
 }
+
+/*
+The isascii() function tests for an ASCII character
+which is any character between 0 and octal 0177 inclusive
+*/

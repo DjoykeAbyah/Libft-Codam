@@ -6,12 +6,11 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/02 19:34:23 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/10 14:38:14 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:03:13 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	lencount(char *s, char c)
 {
@@ -46,17 +45,17 @@ static int	wordcount(char const *s, char c)
 	return (word);
 }
 
-static char	**freedom(char **mdarray)
+static char	**freedom(char **md_array)
 {
 	int	i;
 
 	i = 0;
-	while (mdarray[i] != NULL)
+	while (md_array[i] != NULL)
 	{
-		free(mdarray[i]);
+		free(md_array[i]);
 		i++;
 	}
-	free(mdarray);
+	free(md_array);
 	return (NULL);
 }
 
@@ -79,7 +78,7 @@ static char	*fill(char const *s, char c, int *i)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**splitstr;
+	char	**split_str;
 	int		i;
 	int		j;
 
@@ -87,8 +86,8 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	if (s == NULL)
 		return (NULL);
-	splitstr = (char **)malloc((sizeof(char *) * (wordcount(s, c) + 1)));
-	if (splitstr == NULL)
+	split_str = (char **)malloc((sizeof(char *) * (wordcount(s, c) + 1)));
+	if (split_str == NULL)
 		return (NULL);
 	while (s[i] != '\0')
 	{
@@ -96,13 +95,13 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (s[i] == '\0')
 			break ;
-		splitstr[j] = fill(&s[i], c, &i);
-		if (splitstr[j] == NULL)
-			return (freedom(splitstr));
+		split_str[j] = fill(&s[i], c, &i);
+		if (split_str[j] == NULL)
+			return (freedom(split_str));
 			j++;
 	}
-	splitstr[j] = NULL;
-	return (splitstr);
+	split_str[j] = NULL;
+	return (split_str);
 }
 
 // int	main2()

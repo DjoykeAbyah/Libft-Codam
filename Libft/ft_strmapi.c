@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/26 18:43:47 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/27 17:13:30 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 15:40:00 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,20 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char			*newstring;
+	char			*new_str;
 
 	i = 0;
-	newstring = ft_strdup(s);
-	if (newstring == NULL)
+	new_str = ft_strdup(s);
+	if (new_str == NULL)
 	{
 		return (NULL);
 	}
 	while (s[i] != '\0')
 	{
-		newstring[i] = f(i, s[i]);
+		new_str[i] = f(i, s[i]);
 		i++;
 	}
-	return (newstring);
+	return (new_str);
 }
 
 /*

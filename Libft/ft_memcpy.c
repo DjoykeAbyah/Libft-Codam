@@ -6,25 +6,11 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 14:02:44 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/01 16:10:08 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:48:43 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* copies n bytes from memory area to dst
-if dst and src overlap, behavior is undefined
-Parameters or Arguments
-s1
-An array where s2 will be copied to.
-s2
-The string to be copied.
-n
-The number of characters to copy.
-Returns
-The memcpy function returns s1 eg.
-original value of dst
-The memcpy() function returns a pointer to dest*/
-
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -49,5 +35,23 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-/*last while loop extra ptrd != '\0' 
-but then it doesnt seg fault while it should*/
+/* 
+copies n bytes from memory area to dst
+if dst and src overlap, behavior is undefined
+
+Parameters or Arguments
+s1
+An array where s2 will be copied to.
+s2
+The string to be copied.
+n
+The number of characters to copy.
+
+Returns
+The memcpy function returns s1 eg.
+original value of dst
+The memcpy() function returns a pointer to dest
+
+last while loop extra ptrd != '\0' 
+but then it doesnt seg fault while it should
+*/

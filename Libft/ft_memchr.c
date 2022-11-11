@@ -6,17 +6,11 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 13:14:17 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/01 16:09:51 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:45:28 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* The memchr() 
-(1)built-in function searches the first count bytes pointed to by buf 
-(2)for the first occurrence of c 
-(3)converted to an unsigned character. 
-(4) The search continues until it finds c or examines count bytes.*/
-
-#include <stdlib.h>
+#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -34,8 +28,22 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-/* int niet comparen met adres van string, typecast probleem, size_t geen int, 
+/* 
+It’s a type which is used to represent the size of objects in bytes
+It is guaranteed to be big enough to contain the 
+size of the biggest object the host system can handle. 
+Basically the maximum permissible size is dependent on the compiler; 
+if the compiler is 32 bit then it is simply a typedef(i.e., alias) 
+for unsigned int but if the compiler is 64 bit 
+then it would be a typedef for unsigned long long. 
+The size_t data type is never negative.
 uit index juiste adres geven niet gewoon pointer anders krijg je hele stirng
 (1) find \0
 (2) cast in unsigned memory
-DO NOT OVERPROTECT OR PROTECT AT ALL BECAUSE ORIGINAL DOESNT EITHER*/
+DO NOT OVERPROTECT OR PROTECT AT ALL BECAUSE ORIGINAL DOESNT EITHER
+
+The memchr() 
+(1)built-in function searches the first count bytes pointed to by buf 
+(2)for the first occurrence of c 
+(3)converted to an unsigned character. 
+(4) The search continues until it finds c or examines count bytes.*/

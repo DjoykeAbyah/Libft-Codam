@@ -6,7 +6,7 @@
 #    By: dreijans <dreijans@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/04 16:56:00 by dreijans      #+#    #+#                  #
-#    Updated: 2022/11/09 20:09:58 by dreijans      ########   odam.nl          #
+#    Updated: 2022/11/11 17:40:55 by dreijans      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,7 +89,7 @@ re: fclean all bonus
 
 bonus:
 		$(MAKE) WITH_BONUS=1 all
-		ar -src $(NAME) $(BONUS_OBJ_FILES)
+#		ar -src $(NAME) $(BONUS_OBJ_FILES)
 
 test: re # or *.c als je (SRC) zou doen kan het zijn dat niet alles up to dat is
 		gcc *.c -g

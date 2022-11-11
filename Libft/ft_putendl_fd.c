@@ -6,11 +6,10 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 19:40:10 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/26 11:08:57 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:02:55 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

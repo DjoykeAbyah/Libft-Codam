@@ -6,11 +6,9 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/27 16:17:29 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/27 16:52:43 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:20:41 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

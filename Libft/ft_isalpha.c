@@ -6,12 +6,9 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 14:22:51 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/13 11:05:42 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 15:58:28 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*#include <stdio.h>*/
-/*#include <ctype.h>*/
 
 int	ft_isalpha(int c)
 {
@@ -21,6 +18,16 @@ int	ft_isalpha(int c)
 	}
 	return (0);
 }
+
+/*
+The isalpha() function tests for any character for which isupper(3)
+or islower(3) is true.
+The value of the argument must be representable as an unsigned char or the
+value of EOF.
+
+The function returns zero if the character
+tests false and returns non-zero if the character tests true.
+*/
 
 /*int	main(void)
 {

@@ -6,9 +6,24 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 14:41:18 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/01 16:10:41 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:04:09 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+	size_t	dst_len;
+	size_t	src_len;
+
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (dstsize < dst_len)
+		return (dstsize + src_len);
+	ft_strlcpy(dst + dst_len, src, dstsize - dst_len);
+	return (dst_len + src_len);
+}
 
 /* strlcat() concatenates two strings.
 strlcat() guarantees that the total length of
@@ -27,48 +42,6 @@ RETURN VALUES means the initial length of dst plus the length of src.
 If the return value is >= dstsize, the output string has been truncated.
 It is the caller's responsibility to handle this. 
 size - dstlen  -1 !!!!!!!!!! */
-
-#include "libft.h"
-#include <stdio.h>
-
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
-{
-	size_t	dstlen;
-	size_t	srclen;
-
-	dstlen = ft_strlen(dst);
-	srclen = ft_strlen(src);
-	if (dstsize < dstlen)
-		return (dstsize + srclen);
-	ft_strlcpy(dst + dstlen, src, dstsize - dstlen);
-	return (dstlen + srclen);
-}
-
-// size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
-// {
-// 	size_t	dstlen;
-// 	size_t	srclen;
-// 	char	*ptr;
-// 	size_t	i;
-
-// 	ptr = (char *)src;
-// 	dstlen = ft_strlen(dst);
-// 	srclen = ft_strlen(src);
-// 	if (dstsize < dstlen)
-// 		return (dstsize + srclen);
-// 	while (*dst != '\0' && dstlen < dstsize)
-// 		dst++;
-// 	i = 0;
-// 	while ((*ptr != '\0') && i < (dstsize - dstlen -1))
-// 	{
-// 		*dst = *ptr;
-// 		dst++;
-// 		ptr++;
-// 		i++;
-// 	}
-// 	*dst = '\0';
-// 	return (dstlen + srclen);
-// }
 
 /*KO reason stilll need to figure out probably over protecting
 maybe change to index

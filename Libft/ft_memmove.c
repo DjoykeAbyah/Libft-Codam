@@ -6,17 +6,11 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 14:55:26 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/21 13:26:51 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:51:05 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* copies len bytes from string src to string dst.  
-The two strings may overlap; 
-the copy is always done in a non-destructive manner.
-RETURN 
-returns the original value of dst.*/
-
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -45,7 +39,16 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-/* waarom i is len -1? je zet int over in index 
-int 10 wordt index 9 i0, i1, i2 
-met overlap wil je kopieren vanaf het einde anderetc
-bij memcpy geeft overlap undefinedbehavior, memmove overwrtite*/
+/* 
+copies:
+len bytes from string src to string dst.  
+The two strings may overlap; 
+the copy is always done in a non-destructive manner.
+
+returns:
+the original value of dst.
+i = len -1? changes int to index 
+int 10 = i9 
+met overlap wil je kopieren vanaf het einde ander etc
+bij memcpy geeft overlap undefined behavior, memmove overwrtites
+*/

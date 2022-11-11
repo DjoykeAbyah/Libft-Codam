@@ -6,20 +6,17 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:14:52 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/09 20:09:53 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:28:13 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <string.h>
 # include <stdlib.h>
-#include <stdio.h>
-#include <ctype.h>
-// #include "libft.h"
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <unistd.h>
+# include <stddef.h>
 
 typedef struct s_list
 {
@@ -27,12 +24,6 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-//pointer naar content. fixed bytes voor struct
-
-/**
- * include the libraries you want to include like unistd.h etc
- * make quotes above funtions
- */
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -80,3 +71,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void*));
 
 #endif
+
+/*pointer naar content. fixed bytes voor struct*/

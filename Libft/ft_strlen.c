@@ -6,11 +6,11 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 11:53:32 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/21 16:06:15 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:54:54 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stddef.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -24,4 +24,14 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-/* i[0] till end includes \0 so not really needed to put extra condition of \0*/
+/*
+i[0] till end includes \0
+really needed to put extra condition of \0
+
+description
+the length of the string s. 
+never scans beyond the first maxlen bytes of s.
+
+return:
+number of characters that precede the terminating NUL character
+*/

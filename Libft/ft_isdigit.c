@@ -6,12 +6,9 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 14:40:14 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/13 11:05:52 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 16:39:03 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*#include <stdio.h>
-#include <ctype.h>*/
 
 int	ft_isdigit(int c)
 {
@@ -22,8 +19,16 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-/*int	main(void)
+/*
+function tests for a decimal digit character.
+function returns zero if the character tests false
+and return non-zero if the character tests true.
+*/
+
+/*
+int	main(void)
 {
 	printf("%i\n", ft_isdigit('9'));
 	printf("%i\n", isdigit('2'));
-}*/
+}
+*/

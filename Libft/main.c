@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:13:45 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/10 14:34:26 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/11 18:48:29 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,7 @@
 // #include <stdlib.h>
 // #include <unistd.h>
 
-/*put block brackets when testing you variables
-you don't have to include your libraries in the 
-.c funtcions but put them in your main for testing
-VERGEET NIET DEZE FILE TE VERWIJDEREN VOORDAT JE PUSHT*/
-
-//test bzero to see if it actually does anything
+/*VERGEET NIET DEZE FILE TE VERWIJDEREN VOORDAT JE PUSHT*/
 
 void	cccc(unsigned int i, unsigned int j)
 {
@@ -46,6 +41,8 @@ char	bbbbb(unsigned int i, char c)
 {
 	return (c + i);
 }
+
+/*test bzero to see if it actually does anything*/
 
 void	helpmesee(char *help, int n)
 {
@@ -306,13 +303,6 @@ int	main(void)
 		i++;
 	}
 	return (0);
-
-
-
-
-
-	
-	
 	printf("----------------------------");
 	printf("\n%s\n", "test bonus");
 
@@ -344,12 +334,6 @@ int	main(void)
 }
 
 /* voor inleveren main verwijderen en git clonen voor final check!!!!!*/
-
-
-
-
-
-
 
 
 // void	del(void *a)

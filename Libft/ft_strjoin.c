@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 14:19:08 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/11 16:03:49 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 15:07:34 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 }
 
 /*
-Prototype:
-char *ft_strjoin(char const *s1, char const *s2);
-
 Parameters:
 1) s1: The prefix string.
 2) s2: The suffix string.

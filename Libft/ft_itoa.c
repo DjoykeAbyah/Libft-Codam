@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/27 17:43:26 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/11 15:58:48 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 14:29:05 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,6 @@ Allocates (with malloc(3)) and returns a string
 representing the integer received as an argument.
 Negative numbers must be handled.
 minus before i???
+
+<= 0 = i + 1 because you want space to print minus or a zero/
 */

@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 14:38:00 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/14 13:40:09 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 15:15:06 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ or the original dst string was longer than dstsize
 
 RETURN
 functions return the total length of the string they tried to create.  
-For strlcpy() that means the length of src.  
-For strlcat() that means the initial length of dst plus the length of src.
+For strlcpy() that means the length of src.
 
 If the return value is >= dstsize, the output string has been truncated.  
 It is the caller's responsibility to handle this.

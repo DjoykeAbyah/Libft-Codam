@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 14:11:04 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/11 16:13:10 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 15:20:19 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (new_str);
 }
 
-/* start + len is einde string*/
-/* if s1 + i*/
-
-/*ft_strtrim
-Prototype:
-char *ft_strtrim(char const *s1, char const *set);
+/* 
+start + len is einde string
+if s1 + i
 
 Parameters:
 1) s1: The string to be trimmed.

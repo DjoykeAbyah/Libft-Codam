@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/28 20:32:01 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/28 21:14:27 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 13:33:04 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ fd: The file descriptor on which to write.
 
 Return value: 
 None
+
 External functs:
 write
 

@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 19:40:10 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/11 16:02:55 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 13:33:00 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,13 @@ int	i;
 */
 
 /*
-Prototype void ft_putendl_fd(char *s, int fd);
-Turn in files -
 Parameters s: The string to output.
 fd: The file descriptor on which to write.
+
 Return value None
+
 External functs. write
+
 Description Outputs the string ’s’ to the given file descriptor
 followed by a newline.
 */

@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/05 19:14:52 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/11 16:28:13 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 11:30:04 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
+
+/*pointer naar content. fixed bytes voor struct*/
 
 typedef struct s_list
 {
@@ -71,5 +73,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void*));
 
 #endif
-
-/*pointer naar content. fixed bytes voor struct*/

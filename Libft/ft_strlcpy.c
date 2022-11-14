@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/11 14:38:00 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/11 16:04:13 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 13:40:09 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,32 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 }
 
 /*
-size_t kan niet negatief zijn dus (i +1) ipv (destsize -1)
+copy and concatenate strings 
+They are designed to be safer, more consistent, 
+and less error prone replacements for the easily misused functions
 
+take the full size of the destination buffer 
+and guarantee NUL-termination if there is room.  
+Note that room for the NUL should be included in dstsize.
+
+copies up to dstsize - 1 characters from the string src to dst, 
+NUL-terminating the result if dstsize is not 0.
+
+appends string src to the end of dst.  
+It will append at most dstsize - strlen(dst) - 1 characters.  
+It will then NUL-terminate, unless dstsize is 0 
+or the original dst string was longer than dstsize 
+(in practice this should not happen as it
+
+RETURN
+functions return the total length of the string they tried to create.  
+For strlcpy() that means the length of src.  
+For strlcat() that means the initial length of dst plus the length of src.
+
+If the return value is >= dstsize, the output string has been truncated.  
+It is the caller's responsibility to handle this.
+
+size_t kan niet negatief zijn dus (i +1) ipv (destsize -1)
 
 int main(void)
 {
@@ -38,4 +62,5 @@ int main(void)
 	
 	printf("%zu\n", ft_strlcpy(dest, src, 5));
 	printf("%zu\n", strlcpy(dest, src, 5));
-}*/
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 17:54:30 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/11 16:47:56 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 13:32:36 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
 /*
 The memcmp() function compares byte string s1 against byte string s2. 
 Both strings are assumed to be n bytes long.

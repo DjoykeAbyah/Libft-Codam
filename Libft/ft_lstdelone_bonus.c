@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/08 15:20:11 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/11 16:00:30 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 13:27:55 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,3 @@ the node’s content using the function ’del’ given
 as a parameter and free the node. The memory of
 ’next’ must not be freed.
 */
-
-// deze testen met malloc?

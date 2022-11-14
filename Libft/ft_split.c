@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/02 19:34:23 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/11 16:03:13 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 13:33:49 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,52 +104,27 @@ char	**ft_split(char const *s, char c)
 	return (split_str);
 }
 
-// int	main2()
-// {
-// 	int i = 0;
-// 	char **array;
-// 	char test24[] = "...loo...books....look....a....123.....test...";
-// 	array = ft_split(test24, '.');
-// 	while (array && array[i])
-// 	{
-// 		printf("%s\n", array[i]);
-// 		i++;
-// 	}
-// 	return (1);
-// }
+/*
+Parameters:
+s: The string to be split.
+c: The delimiter character.
 
-// int	main(void)
-// {
-// 	main2();
-// 	while(1);
-// }
+Return value: 
+The array of new strings resulting from the split.
+NULL if the allocation fails.
 
-// /* 
-// reinitiate index for the current string
-// manually null terminate last row
-// /*
+External functs: 
+malloc, 
+free
 
-// /*
-// Parameters:
-// s: The string to be split.
-// c: The delimiter character.
+Description: 
+Allocates (with malloc(3)) 
+returns an array of strings obtained by splitting s
+using the character ’c’ as a delimiter. 
+The array must end with a NULL pointer.
 
-// Return value: 
-// The array of new strings resulting from the split.
-// NULL if the allocation fails.
-
-// External functs: 
-// malloc, 
-// free
-
-// Description: 
-// Allocates (with malloc(3)) 
-// returns an array of strings obtained by splitting s
-// using the character ’c’ as a delimiter. 
-// The array must end with a NULL pointer.
-
-// extra function messes with value of i and j.
-// uses pointers to change value not the addres
-// break prevents from accessing unallocated memory
-// stops the loop
-// /*
+extra function messes with value of i and j.
+uses pointers to change value not the addres
+break prevents from accessing unallocated memory
+stops the loop
+*/

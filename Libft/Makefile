@@ -6,12 +6,12 @@
 #    By: dreijans <dreijans@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/04 16:56:00 by dreijans      #+#    #+#                  #
-#    Updated: 2022/11/11 17:40:55 by dreijans      ########   odam.nl          #
+#    Updated: 2022/11/14 12:12:36 by dreijans      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CC = gcc
+CC = cc
 SRC = \
 ft_isalnum.c \
 ft_isalpha.c \
@@ -69,10 +69,8 @@ endif
 .PHONY: all clean fclean re test bonus
 
 all: $(NAME)
-#later $(CC) $(CFLAGS) $(SRC) verwijderen want we hbeben geen executable nodig voor de opdracht 
-#stuur geen main.c en test recept verwijderen
+
 $(NAME): $(OBJ_FILES)
-#		$(CC) $(CFLAGS) $(SRC) main.c
 		ar -src $(NAME) $(OBJ_FILES)
 
 %.o: %.c
@@ -82,15 +80,10 @@ clean:
 		rm -f $(REG_OBJ_FILES)
 		rm -f $(BONUS_OBJ_FILES)
 
-fclean: clean # VERGEET NIET A.OUT TE VERWIJDEREN VOORDAT JE PUSHT
-		rm -f $(NAME) ./a.out 
+fclean: clean 
+		rm -f $(NAME) 
 
 re: fclean all bonus
 
 bonus:
 		$(MAKE) WITH_BONUS=1 all
-#		ar -src $(NAME) $(BONUS_OBJ_FILES)
-
-test: re # or *.c als je (SRC) zou doen kan het zijn dat niet alles up to dat is
-		gcc *.c -g
-		./a.out

@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/24 12:09:38 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/10/24 13:39:20 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 13:35:47 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,14 @@ char	*ft_strdup(const char *s1)
 	return (s2);
 }
 
-/*The strdup() function allocates sufficient memory 
+/*
+function allocates sufficient memory 
 1)for a copy of the string s1,
 2)does the copy 
 3)and returns a pointer to it.
+
 The pointer may subsequently be used as an argument to the function free(3).
 If insufficient memory is available, NULL is returned and errno is set to ENOMEM.
 free(3), malloc(3)
-return char pointer*/
+return char pointer
+*/

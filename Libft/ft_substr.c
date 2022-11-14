@@ -6,7 +6,7 @@
 /*   By: dreijans <dreijans@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/24 14:52:15 by dreijans      #+#    #+#                 */
-/*   Updated: 2022/11/11 16:13:19 by dreijans      ########   odam.nl         */
+/*   Updated: 2022/11/14 13:53:07 by dreijans      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,5 @@ als start groter is dan strlen valt er niks te kopieren, geef empty string.
 als len groter is dan strlen wil je maar tot \0 kopieren dus strlen - start
 if i set my len to 0 it doesnt make any sense to copy from 0 +start 
 so i needed another exeption to set my newstr to zero without ft_strlcpy
-and after malloc because i need the string to exist*/
+and after malloc because i need the string to exist
+*/
